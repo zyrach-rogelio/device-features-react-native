@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Travel Diary",
+    "slug": "travel-diary",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#F6F4F0"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Travel Diary needs camera access to capture photos of your travel locations.",
+        "NSLocationWhenInUseUsageDescription": "Travel Diary uses your location to automatically detect and record the address where your photo was taken.",
+        "NSPhotoLibraryUsageDescription": "Travel Diary needs photo library access to save your travel photos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#F6F4F0"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Travel Diary needs camera access to capture your travel photos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Travel Diary uses your location to record where your photos were taken."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#534AB7"
+        }
+      ]
+    ]
+  }
+}
